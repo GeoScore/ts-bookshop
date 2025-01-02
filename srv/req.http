@@ -1,0 +1,7 @@
+@server = http://localhost:4004/browse
+
+###
+GET {{server}}/Books
+
+###
+GET {{server}}/getAuthorByID(authorID=101)
