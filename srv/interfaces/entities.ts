@@ -1,7 +1,7 @@
 import { Currency } from "#cds-models/CatalogService";
 
-interface Book {
-    ID          : String,
+export interface Book {
+    ID          : Number,
     title       : String,
     descr       : String,
     author      : Author,
@@ -10,8 +10,14 @@ interface Book {
     currency    : Currency,
 }
 
-interface Author {
-    ID      : String,
+export interface Author {
+    ID      : Number,
     name    : String,
     books   : Book[]
 }
+
+export type AuthorIDName = {
+    ID      : Number,
+    name    : String,
+}
+
