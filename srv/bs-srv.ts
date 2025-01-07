@@ -6,12 +6,12 @@ import { AuthorIDName } from './interfaces/entities'
 class CatalogService extends cds.ApplicationService {
         async init() {
         
-        this.on("getAuthorByID", this.fnGeyAuthorByID);
+        this.on("getAuthorByID", this.fnGetAuthorByID);
 
         await super.init();
     }
 
-    async fnGeyAuthorByID(oRequest: Request) : Promise<AuthorIDName> {
+    async fnGetAuthorByID(oRequest: Request) : Promise<AuthorIDName> {
         const { Authors } = this.entities;
         const iAuthorID : Number = oRequest.data.authorID;
         if (!iAuthorID){

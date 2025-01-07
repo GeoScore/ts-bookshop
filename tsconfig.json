@@ -12,7 +12,7 @@
     "paths": {
       "#cds-models/*": [
         "./@cds-models/*",
-        "./srv/interfaces/*"
+        "./srv/*"
       ]
     }
   }
