@@ -1,4 +1,9 @@
 {
+  "rules": {
+    "linebreak-style": 0,
+    "global-require": 0,
+    "eslint linebreak-style": [0, "error", "windows"],
+  },
   // uncomment entries once all libraries have been installed via 'npm install'
   "eslint.validate": [
     // "cds",

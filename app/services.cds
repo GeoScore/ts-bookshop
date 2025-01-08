@@ -1,2 +1,2 @@
 
-using from './bookshop-ui/annotations';
+using from './bookshop-useri/annotations';

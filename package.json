@@ -22,7 +22,8 @@
   "scripts": {
     "start": "cds-serve",
     "watch": "cds-tsx w",
-    "watch-bookshop-ui": "cds watch --open bsui.bookshopui/index.html?sap-ui-xx-viewCache=false --livereload false"
+    "watch-bookshop-ui": "cds watch --open bsui.bookshopui/index.html?sap-ui-xx-viewCache=false --livereload false",
+    "watch-bookshop-useri": "cds watch --open bookshop-useri/webapp/index.html?sap-ui-xx-viewCache=false"
   },
   "imports": {
     "#cds-models/*": "./@cds-models/*/index.js"

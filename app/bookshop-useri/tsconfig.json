@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es6",
+    "target": "es2022",
     "module": "es2022",
     "skipLibCheck": true,
     "allowJs": true,
@@ -11,7 +11,7 @@
     "outDir": "./dist",
     "baseUrl": "./",
     "paths": {
-      "bsui/bookshopui/*": [
+      "bui/bookshopuseri/*": [
         "./webapp/*"
       ]
     },

@@ -1,7 +1,7 @@
 {
   "_version": "1.65.0",
   "sap.app": {
-    "id": "bsui.bookshopui",
+    "id": "bui.bookshopuseri",
     "type": "application",
     "i18n": "i18n/i18n.properties",
     "applicationVersion": {
@@ -13,7 +13,7 @@
     "sourceTemplate": {
       "id": "@sap/generator-fiori:basic",
       "version": "1.15.3",
-      "toolsId": "140038be-f5b0-4a7d-af40-2d47b4605b46"
+      "toolsId": "3251c2da-5977-44c2-95b2-308089bca33d"
     },
     "dataSources": {
       "mainService": {
@@ -59,7 +59,7 @@
       "i18n": {
         "type": "sap.ui.model.resource.ResourceModel",
         "settings": {
-          "bundleName": "bsui.bookshopui.i18n.i18n"
+          "bundleName": "bui.bookshopuseri.i18n.i18n"
         }
       },
       "": {
@@ -84,32 +84,32 @@
         "routerClass": "sap.m.routing.Router",
         "viewType": "XML",
         "async": true,
-        "viewPath": "bsui.bookshopui.view",
+        "viewPath": "bui.bookshopuseri.view",
         "controlAggregation": "pages",
         "controlId": "app",
         "clearControlAggregation": false
       },
       "routes": [
         {
-          "name": "RouterootView",
+          "name": "RouteView",
           "pattern": ":?query:",
           "target": [
-            "TargetrootView"
+            "TargetView"
           ]
         }
       ],
       "targets": {
-        "TargetrootView": {
+        "TargetView": {
           "viewType": "XML",
           "transition": "slide",
           "clearControlAggregation": false,
-          "viewId": "rootView",
-          "viewName": "rootView"
+          "viewId": "View",
+          "viewName": "View"
         }
       }
     },
     "rootView": {
-      "viewName": "bsui.bookshopui.view.App",
+      "viewName": "bui.bookshopuseri.view.App",
       "type": "XML",
       "async": true,
       "id": "App"

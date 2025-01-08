@@ -1,0 +1,34 @@
+<mvc:View controllerName="bui.bookshopuseri.controller.View"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m" xmlns:smartList="sap.ui.comp.smartlist">
+    <Page id="page" title="{i18n>title}">
+        <Button text="BTNXD" icon="sap-icon://accessibility" press="onPressButton" />
+        <Table id="bookTableID" alternateRowColors="true" items="{
+            path: '/Books'
+        }">
+            <columns>
+                <Column>
+                    <Text text="Title" />
+                </Column>
+                <Column>
+                    <Text text="Author" />
+                </Column>
+                <Column>
+                    <Text text="Stock" />
+                </Column>
+                <Column>
+                    <Text text="Price" />
+                </Column>
+            </columns>
+            <items>
+                <ColumnListItem>
+                    <Text text="{title}"/>
+                    <Text  text="{path:'author/name',
+                    formatter: '.formatter.shortAuthorName'}"/>
+                    <Text text="{stock}"/>
+                    <Text text="{price}"/>
+                </ColumnListItem>
+            </items>
+        </Table>
+    </Page>
+</mvc:View>

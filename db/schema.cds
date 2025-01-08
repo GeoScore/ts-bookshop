@@ -1,10 +1,10 @@
-using  { sap, Currency, managed, cuid } from '@sap/cds/common';
+using  { sap, Currency, managed } from '@sap/cds/common';
 
 namespace cap_typescript;
 
 entity Books : managed {
     key ID : Integer;
-    title  : localized String(111);
+    title  : String(111);
     descr  : localized String(1111);
     author : Association to Authors;
     genre  : Association to Genres;
@@ -24,4 +24,4 @@ entity Genres : sap.common.CodeList {
     key ID   : Integer;
     parent   : Association to Genres;
     children : Composition of many Genres on children.parent = $self;
-} 
+}

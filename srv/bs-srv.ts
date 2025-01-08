@@ -1,4 +1,4 @@
-import cds from '@sap/cds';
+import * as cds from '@sap/cds';
 import { Request, Service } from '@sap/cds';
 import { Author, Book } from '#cds-models/CatalogService';
 import { AuthorIDName } from './interfaces/entities'
@@ -7,17 +7,16 @@ class CatalogService extends cds.ApplicationService {
         async init() {
         
         this.on("getAuthorByID", this.fnGetAuthorByID);
-
         await super.init();
     }
 
-    async fnGetAuthorByID(oRequest: Request) : Promise<AuthorIDName> {
+    async fnGetAuthorByID(oRequest: Request) : Promise<AuthorIDName | AuthorIDName[]> {
         const { Authors } = this.entities;
         const iAuthorID : Number = oRequest.data.authorID;
         if (!iAuthorID){
             throw new Error('ID not found');
         }
-        let aResult: AuthorIDName[];
+        let aResult : Array<AuthorIDName | AuthorIDName[]>;
         try{
             aResult = await SELECT
                 .from(`${Authors.name} as A`)
